@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #0d7563;
-  --primary-light: #14b8a6;
-  --accent: #14b8a6;
-  --accent-light: #2dd4bf;
-  --background: #fafafa;
-  --foreground: #0a0f0e;
+  --primary: #0f766e;
+  --primary-light: #0d9488;
+  --accent: #0d9488;
+  --accent-light: #14b8a6;
+  --background: #ffffff;
+  --foreground: #111827;
   --card: #ffffff;
   --border: #e2e8f0;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
   --input-background: #fafafa;
+  --section-bg-dark: #f1f5f9;
 }
 
 .dark {
@@ -21,14 +22,18 @@
   --border: #1e2d2c;
   --muted: #1a2726;
   --muted-foreground: #94a3b8;
-  --primary: #14b8a6;
-  --accent: #2dd4bf;
+  --primary: #0d9488;
+  --accent: #14b8a6;
   --input-background: #1a2726;
+  --section-bg-dark: #09130e;
+}
+
+.dark body {
+  color: var(--foreground);
 }
 
 body {
   background-color: var(--background);
-  color: var(--foreground);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
@@ -41,53 +46,42 @@ html {
 .logo-svg {
   fill: none;
 }
-
 .logo-outer-hex {
   fill: rgba(13, 117, 99, 0.2);
   stroke: var(--primary);
   stroke-width: 2;
 }
-
 .logo-inner-hex {
   fill: rgba(13, 117, 99, 0.1);
 }
-
 .logo-d {
   fill: var(--primary);
 }
-
 .logo-d-inner {
   fill: var(--background);
 }
-
 .logo-bracket {
   stroke: var(--accent);
   stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
 .logo-dot {
   fill: var(--accent);
 }
-
 .dark .logo-outer-hex {
   fill: rgba(20, 184, 166, 0.2);
   stroke: var(--primary-light);
 }
-
 .dark .logo-inner-hex {
   fill: rgba(20, 184, 166, 0.1);
 }
-
 .dark .logo-d {
   fill: var(--primary-light);
 }
-
 .dark .logo-bracket {
   stroke: var(--accent-light);
 }
-
 .dark .logo-dot {
   fill: var(--accent-light);
 }
@@ -102,24 +96,20 @@ html {
   gap: 0.5rem;
   text-decoration: none;
 }
-
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   box-shadow: 0 10px 25px rgba(13, 117, 99, 0.3);
 }
-
 .btn-primary:hover {
   box-shadow: 0 15px 35px rgba(13, 117, 99, 0.4);
   transform: translateY(-2px);
 }
-
 .btn-outline {
   border: 2px solid var(--primary);
   color: var(--primary);
   background: transparent;
 }
-
 .btn-outline:hover {
   background: rgba(13, 117, 99, 0.1);
 }
@@ -127,11 +117,19 @@ html {
 .grid-pattern {
   background-image: linear-gradient(
       to right,
-      rgba(128, 128, 128, 0.03) 1px,
+      rgba(15, 118, 110, 0.05) 1px,
       transparent 1px
     ),
-    linear-gradient(to bottom, rgba(128, 128, 128, 0.03) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(15, 118, 110, 0.05) 1px, transparent 1px);
   background-size: 4rem 4rem;
+}
+.dark .grid-pattern {
+  background-image: linear-gradient(
+      to right,
+      rgba(13, 148, 136, 0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(13, 148, 136, 0.06) 1px, transparent 1px);
 }
 
 .card {
@@ -139,4 +137,22 @@ html {
   border: 2px solid var(--border);
   border-radius: 1rem;
   overflow: hidden;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-25px) translateX(5px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.8;
+  }
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

@@ -189,11 +189,18 @@ const Services = () => {
     <section
       id="services"
       className="py-24 relative overflow-hidden"
-      style={{ backgroundColor: "var(--muted)" }}
+      style={{ backgroundColor: "var(--section-bg-dark)" }}
     >
+      {}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/3 right-0 w-96 h-96 bg-teal-700 opacity-10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-teal-500 opacity-10 rounded-full blur-3xl"></div>
+        <div
+          className="absolute -left-32 top-1/4 w-96 h-96 bg-teal-500 rounded-full blur-3xl opacity-20 animate-float"
+          style={{ animationDelay: "0s" }}
+        ></div>
+        <div
+          className="absolute -right-32 bottom-1/4 w-96 h-96 bg-sky-500 rounded-full blur-3xl opacity-20 animate-float"
+          style={{ animationDelay: "3s" }}
+        ></div>
       </div>
 
       <div className="container mx-auto px-4">
@@ -206,7 +213,7 @@ const Services = () => {
               Serviços
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 dark:from-gray-100 to-gray-600 dark:to-gray-400 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-black dark:from-gray-100 to-gray-700 dark:to-gray-400 bg-clip-text text-transparent">
             O Que Fazemos
           </h2>
           <p

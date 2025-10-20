@@ -28,7 +28,6 @@ const Logo = () => (
     <circle cx="50" cy="77" r="2" className="logo-dot" />
   </svg>
 );
-
 const SunIcon = () => (
   <svg
     className="w-6 h-6 text-teal-600"
@@ -44,7 +43,6 @@ const SunIcon = () => (
     />
   </svg>
 );
-
 const MoonIcon = () => (
   <svg
     className="w-6 h-6 text-teal-700"
@@ -91,7 +89,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b-2 z-50 shadow-sm"
+      className="fixed top-0 w-full backdrop-blur-md border-b-2 z-50 shadow-sm"
       style={{ borderColor: "var(--border)" }}
     >
       <div className="container mx-auto px-4 py-4">
@@ -102,19 +100,17 @@ const Header = () => {
               DEVELOPS
             </span>
           </a>
-
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-gray-600 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
+                className="text-gray-800 dark:text-gray-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
               >
                 {link.label}
               </a>
             ))}
           </nav>
-
           <div className="hidden md:flex items-center gap-3">
             <button
               onClick={handleThemeSwitch}
@@ -127,7 +123,6 @@ const Header = () => {
               Fale Conosco
             </a>
           </div>
-
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={handleThemeSwitch}
@@ -166,7 +161,6 @@ const Header = () => {
             </button>
           </div>
         </div>
-
         {isMenuOpen && (
           <nav className="mobile-menu active md:hidden pt-4 pb-2 flex-col gap-4">
             {navLinks.map((link) => (
@@ -174,7 +168,7 @@ const Header = () => {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-600 dark:text-gray-300 py-2 hover:text-teal-600"
+                className="text-gray-800 dark:text-gray-300 py-2 hover:text-teal-600"
               >
                 {link.label}
               </a>
@@ -192,5 +186,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;
