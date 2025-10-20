@@ -52,6 +52,7 @@ const StepCard = ({ step }) => {
           </div>
           <span className="text-5xl font-bold text-foreground/20 mt-4 md:mt-0">
             {" "}
+            {}
             {step.number}
           </span>
         </div>
@@ -92,6 +93,7 @@ const Process = () => {
           </p>
         </div>
 
+        {}
         <div className="relative">
           <div className="hidden md:block absolute top-7 left-0 w-full h-px bg-border -z-1"></div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

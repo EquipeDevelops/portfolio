@@ -5,6 +5,8 @@
   --primary-light: #0d9488;
   --accent: #0d9488;
   --accent-light: #14b8a6;
+  --bg-l: #128376;
+  --bg-l2: #093f39;
   --background: #ffffff;
   --foreground: #111827;
   --card: #ffffff;
@@ -25,7 +27,19 @@
   --primary: #0d9488;
   --accent: #14b8a6;
   --input-background: #1a2726;
-  --section-bg-dark: #09130e;
+  --section-bg-dark: #040a08;
+}
+a {
+  color: inherit;
+  font-weight: 600;
+}
+
+h2 {
+  color: inherit;
+}
+
+p {
+  color: inherit;
 }
 
 .dark body {
@@ -155,4 +169,51 @@ html {
 }
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--card);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+  border: 2px solid var(--card);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--card);
+}
+
+.grid-pattern-visible {
+  background-image: linear-gradient(
+      to right,
+      rgba(20, 184, 166, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(20, 184, 166, 0.15) 1px, transparent 1px);
+  background-size: 3rem 3rem;
+}
+
+@keyframes pulse-icon {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse-icon {
+  animation: pulse-icon 2s ease-in-out infinite;
 }

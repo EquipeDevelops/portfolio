@@ -115,24 +115,17 @@ const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="py-24 relative overflow-hidden"
-      style={{ backgroundColor: "var(--section-bg-dark)" }}
-    >
-      {}
-      <div className="absolute inset-0 -z-10">
-        <div
-          className="absolute -left-32 bottom-1/4 w-96 h-96 bg-teal-500 rounded-full blur-3xl opacity-20 animate-float"
-          style={{ animationDelay: "1s" }}
-        ></div>
-        <div
-          className="absolute -right-32 top-1/4 w-96 h-96 bg-sky-500 rounded-full blur-3xl opacity-20 animate-float"
-          style={{ animationDelay: "4s" }}
-        ></div>
-      </div>
+    <section id="contact" className="py-24 relative">
+      <div
+        className="absolute bottom-1/4 -left-32 w-96 h-96 bg-teal-700 rounded-full blur-3xl opacity-20 animate-float"
+        style={{ animationDelay: "1s" }}
+      ></div>
+      <div
+        className="absolute top-1/4 -right-32 w-96 h-96 bg-teal-700 rounded-full blur-3xl opacity-20 animate-float"
+        style={{ animationDelay: "4s" }}
+      ></div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <div className="inline-block mb-4">
             <span
@@ -155,7 +148,6 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {}
           <div className="lg:col-span-1 space-y-6">
             <h3 className="text-xl font-semibold mb-6">
               Informações de Contato
@@ -181,7 +173,6 @@ const Contact = () => {
             <SupportCard />
           </div>
 
-          {}
           <div className="lg:col-span-2">
             <div className="card shadow-xl">
               <div className="p-6">
