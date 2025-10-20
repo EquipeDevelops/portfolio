@@ -1,0 +1,41 @@
+<svg
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M50 5L90 27.5V72.5L50 95L10 72.5V27.5L50 5Z"
+    fill="rgba(13, 117, 99, 0.2)"
+    stroke="#0f766e"
+    stroke-width="2"
+  />
+  <path
+    d="M50 15L80 32.5V67.5L50 85L20 67.5V32.5L50 15Z"
+    fill="rgba(13, 117, 99, 0.1)"
+  />
+  <path
+    d="M35 35V65H45C52 65 58 60 58 50C58 40 52 35 45 35H35Z"
+    fill="#0f766e"
+  />
+  <path
+    d="M40 40V60H45C48.5 60 52 57 52 50C52 43 48.5 40 45 40H40Z"
+    fill="#ffffff"
+  />
+  <path
+    d="M62 42L67 50L62 58"
+    stroke="#0d9488"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <path
+    d="M28 42L23 50L28 58"
+    stroke="#0d9488"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <circle cx="50" cy="23" r="2" fill="#0d9488" />
+  <circle cx="50" cy="77" r="2" fill="#0d9488" />
+</svg>
